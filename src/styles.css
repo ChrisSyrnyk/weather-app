@@ -1,0 +1,372 @@
+
+:root{
+    /*background-color: rgb(70, 140, 158);*/
+    background: url("./img/clouds.JPG") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*variables*/
+    --transparent: rgb(0, 0, 0, 0);
+    --divider-color: white; 
+    --card-color: rgba(70, 68, 68, 0.8);
+    --icon-blue: rgb(0, 154, 165);
+}
+
+/*Search bar styles*/
+.search-bar{
+    display: flex;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    margin: auto;
+    text-align: left;
+    box-shadow: 0 0 3px black;
+}
+
+.location-form{
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-left: 20px;
+    width: auto;
+    height: 50%;
+    color: white;
+}
+
+.input-box{
+    display: flex;
+    position: relative;
+    width: 40vw;
+    height: 20px;
+    margin: auto;
+    margin-left: 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-left: 5px;
+    background-color: var(--icon-blue);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.location{
+    display: flex;
+    position: relative;
+    width: auto;
+    padding: 5px;
+    height: 20px;
+    margin: auto;
+    background-color: var(--card-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: large;
+    user-select: none;
+}
+
+.degree-toggle{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 20px;
+    margin: auto;
+    margin-right: 5%;
+    padding: 5px;
+    background-color: var(--icon-blue);
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
+    user-select: none;
+}
+
+.degree-toggle:active{
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
+}
+
+.search-font{
+    font-size: larger;
+    color: whitesmoke;
+}
+
+/*Todays weather styles*/
+.todays-weather{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 300px;
+    top: 50px;
+    left: 0;
+    background-color: var(--transparent);
+    text-align: left;
+    user-select: none;
+}
+
+.current-card{
+ display: flex;
+ position: relative;
+ flex-direction: column;
+ width: auto;
+ min-width: 200px;
+ height: 250px;
+ margin: auto;
+ margin-left: 5%;
+ background-color: var(--card-color);
+ border: none;
+ border-radius: 10px;   
+}
+
+.current-icon{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    background-color: var(--icon-blue);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.current-temp{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-top: 0;
+    background-color: var(--transparent);
+    color: white;
+    justify-content: center;
+    font-size: 120px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.current-description{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-top: 0;
+    background-color: var(--transparent);
+    color: white;
+    justify-content: center;
+    font-size: medium;
+}
+
+/*Hourly weather styles*/
+.hourly-container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    position: relative;
+    width: 60%;
+    height: 250px;
+    margin: auto;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 12px;
+    background-color: var(--transparent);
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, transparent 0%, black 12px, black calc(100% - 12px), transparent 100%);
+}
+
+.hourly-card{
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: auto;
+    min-width: 150px;
+    height: 90%;
+    background-color: var(--card-color);
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hourly-divider{
+    display: flex;
+    flex: 0 0 auto;
+    width: 2px;
+    height: 85%;
+    background-color: black;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 0px;
+    border: none;
+    border-radius: 1px;
+}
+
+.hourly-icon{
+    display: flex;
+}
+
+.hourly-whitespace{
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 160px;
+    height: 100%;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 2px;
+}
+
+.hourly-topbar{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+}
+
+.hourly-icon{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 40px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    background-color: var(--icon-blue);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.hourly-time{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.hourly-temp{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+    background-color: var(--transparent);
+    color: white;
+    justify-content: center;
+    font-size: 80px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.hourly-description{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-top: 0;
+    background-color: var(--transparent);
+    color: white;
+    justify-content: center;
+    font-size: medium;
+}
+
+/*14 day trend style*/
+.forteen-day{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 350px);
+    top: 350px;
+    left: 0;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1), rgba(0,0,0,1));
+    
+}
+
+.daily-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: scroll;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 48px;
+    background-color: var(--transparent); 
+    mask-image: linear-gradient(to bottom, transparent 0%, black 48px, black calc(100% - 48px), transparent 100%);
+    
+}
+
+.daily-card{
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    position: relative;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: var(--card-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.daily-divider{
+    display: flex;
+    flex: 0 0 auto;
+    width: 85%;
+    height: 2px;
+    background-color: var(--divider-color);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 1px;
+}
+
+.daily-info{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: white;
+}
+
+.daily-icon{
+    display: flex;
+    width: auto;
+    height: 60%;
+    margin: auto;
+    color: white;
+    background-color: var(--icon-blue);
+    border: none;
+    border-radius: 10px;
+}
+
+
+
+
