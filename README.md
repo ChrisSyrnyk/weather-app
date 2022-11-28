@@ -7,6 +7,7 @@ To view this project visit the following link: https://chrissyrnyk.github.io/wea
 Planned updates:
 (1) Allow users to submit search using the enter button
 (2) update logic for determining 5 day trend to improve accuracy 
-(3) Develope mobile version
+(3) update hourly scroll, to allow horizontal scrolling without a track pad
+(4) Develope mobile version
 
 -Christopher Syrnyk
