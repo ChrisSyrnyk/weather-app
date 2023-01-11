@@ -10,4 +10,7 @@ To view this project visit the following link: https://chrissyrnyk.github.io/wea
 (2) Rework UI to be mobile friendly
 (3) Add map
 
+# Testing
+Checking email update before continuing
+
 -Christopher Syrnyk
