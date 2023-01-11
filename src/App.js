@@ -77,7 +77,6 @@ function App(){
           <input type = "text" id = "city" name = "city" className="input-box"/>
           <button className="submit-button" onClick={updateLocation}>Search</button>
         </div>
-        <div className="location">{currentLocation}</div>
         <div className="degree-toggle search-font" onClick = {()=> toggleisCelcius()}>{toggleSymbol()}</div>
       </div>
       <div className="todays-weather">
