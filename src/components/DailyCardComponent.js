@@ -116,7 +116,7 @@ class DailyCardComponent extends Component{
 
     calculateWind(wind){
         //windspeed given in meters per second
-        let kph = (wind*1000)/3600
+        let kph = wind * 3.6;
         if (this.props.isCelcius){
             return Math.round(kph) + 'kph'
         } else{
