@@ -32,6 +32,7 @@ class DailyCardComponent extends Component{
     setIcon(iconCode){
         this.icon = 'http://openweathermap.org/img/wn/' + iconCode + '@2x.png'
     }
+
     addToTempArray(temp){
         this.tempArray = this.tempArray.concat(temp);
     }
@@ -132,6 +133,7 @@ class DailyCardComponent extends Component{
     render(){
         return(
             <>
+                {this.resetTempArray()}
                 {this.props.weather.list.map((day) =>{
                         this.addToTempArray(day.main.temp);
                         this.addToPop(day.pop);
@@ -164,7 +166,6 @@ class DailyCardComponent extends Component{
                                 {this.resetPop()}
                                 {this.resetWind()}
                             </div>
-                            
                         )
                     } else {
                         //call function to add info to arrays
