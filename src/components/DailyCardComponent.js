@@ -126,6 +126,56 @@ class DailyCardComponent extends Component{
         
     }
 
+    convertDate(dateString){
+        let date = new Date(dateString);
+        let day = date.getDate();
+        let month = date.getMonth();
+        switch(month){
+            case 0:
+                month = 'January';
+                break;
+            case 1:
+                month = 'February';
+                break;
+            case 2:
+                month = 'March';
+                break;
+            case 3:
+                month = 'April';
+                break;
+            case 4:
+                month = 'May';
+                break;
+            case 5:
+                month = 'June';
+                break;
+            case 6:
+                month = 'July';
+                break;
+            case 7:
+                month = 'August';
+                break;
+            case 8:
+                month = 'September';
+                break;
+            case 9:
+                month = 'October';
+                break;
+            case 10:
+                month = 'November';
+                break;
+            case 11:
+                month = 'December';
+                break;
+            default:
+                month = '';      
+        }
+
+
+
+        return month + ' ' + day
+    }
+
 
 
 
@@ -144,20 +194,29 @@ class DailyCardComponent extends Component{
                         return(
                             <div key={day.dt}>
                                 <div className="daily-card">
-                                    <div className = "daily-info">
-                                        {this.date}
+                                    <div className='daily-header'>
+                                        <div className = "daily-info">
+                                            {this.convertDate(this.date)}
+                                        </div>
                                     </div>
-                                    <div className = "daily-icon">
-                                        {<img src= {this.icon}/>}
-                                    </div>
-                                    <div className = "daily-info">
-                                        {'High: ' + this.calculateTemp(this.returnHighTemp()) + '°' + ' / Low: ' + this.calculateTemp(this.returnLowTemp())+ '°'}
-                                    </div>
-                                    <div className = "daily-info">
-                                        {'Precipitation: ' + this.determinePop() + '%'}
-                                    </div>
-                                    <div className = "daily-info">
-                                        {'Max Windspeed: ' + this.calculateWind(this.determineMaxWind())}
+                                    <div className='daily-body'>
+                                        <div className = "daily-icon">
+                                            {<img src= {this.icon}/>}
+                                        </div>
+                                        <div className='high-low'>
+                                            <div className = "daily-info">
+                                                {'High: ' + this.calculateTemp(this.returnHighTemp()) + '°'}
+                                            </div> 
+                                            <div className = "daily-info">
+                                                {'Low: ' + this.calculateTemp(this.returnLowTemp())+ '°'}
+                                            </div>
+                                        </div>
+                                        <div className = "daily-info">
+                                            {'POP: ' + this.determinePop() + '%'}
+                                        </div>
+                                        <div className = "daily-info">
+                                            {'Wind: ' + this.calculateWind(this.determineMaxWind())}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="daily-divider"></div>
