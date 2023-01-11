@@ -1,13 +1,13 @@
-Weather App:
+# Description:
 
 This projected was created using the openweather API. It provides weather information for over 200,000 cities around the world. Current weather, hourly weather and the five day trend are all displayed in a user friendly format. Currently there is no mobile version available. 
 
+# Link to most recent build:
 To view this project visit the following link: https://chrissyrnyk.github.io/weather-app/
 
-Planned updates:
-(1) Allow users to submit search using the enter button
-(2) update logic for determining 5 day trend to improve accuracy 
-(3) update hourly scroll, to allow horizontal scrolling without a track pad
-(4) Develope mobile version
+# Planned updates:
+(1) Fix logic behind future high and low temp
+(2) Rework UI to be mobile friendly
+(3) Add map
 
 -Christopher Syrnyk
