@@ -123,8 +123,9 @@
  display: flex;
  position: relative;
  flex-direction: column;
- width: 25vw;
- max-width: 150px;
+ width: auto;
+ min-width: 100px;
+ max-width: 200px;
  height: 80%;
  margin: auto;
  margin-left: 5%;
@@ -137,11 +138,11 @@
 .current-icon{
     display: flex;
     position: relative;
-    width: auto;
-    height: 40px;
+    width: 40%;
+    height: auto;
     margin: auto;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 2px;
+    margin-left: 2px;
     margin-bottom: 0;
     background-color: var(--icon-blue);
     color: white;
@@ -158,7 +159,7 @@
     background-color: var(--transparent);
     color: white;
     justify-content: center;
-    font-size: min(15vi, 120px); /* was 120px*/
+    font-size: min(15vi, 90px); /* was 120px*/
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
