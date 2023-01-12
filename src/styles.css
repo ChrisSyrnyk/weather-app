@@ -294,6 +294,7 @@
 .hourly-time{
     display: flex;
     position: relative;
+    color: white;
     width: auto;
     height: auto;
     margin: auto;
