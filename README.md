@@ -6,7 +6,8 @@ This projected was created using the openweather API. It provides weather inform
 To view this project visit the following link: https://chrissyrnyk.github.io/weather-app/
 
 # Planned updates:
-(1) Rework UI to be mobile friendly
-(2) Add map
+(1) Add current location info <br />
+(2) Add five day trend header <br />
+(3) Add map
 
 
