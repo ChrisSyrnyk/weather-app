@@ -211,7 +211,7 @@
     overflow-x: scroll;
     position: relative;
     width: 60%;
-    height: 30vh;
+    height: calc(40vh - 100px);
     margin: auto;
     margin-right: 5%;
     margin-left: 5%;
