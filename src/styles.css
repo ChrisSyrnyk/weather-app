@@ -11,6 +11,7 @@
     --divider-color: white; 
     --card-color: rgba(70, 68, 68, 0.8);
     --icon-blue: rgb(0, 154, 165);
+    --verticalSpace: calc(-50px +100vh);
 }
 
 /*Search bar styles*/
@@ -106,13 +107,38 @@
     color: whitesmoke;
 }
 
+/* Location div*/
+.location-container{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 50px;
+    top: 50px;
+    left: 0px
+}
+
+.location-card{
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-left: 5%;
+    background-color: var(--card-color);
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
 /*Todays weather styles*/
 .todays-weather{
     display: flex;
     position: absolute;
     width: 100vw;
-    height: 30vh;
-    top: 50px;
+    height: calc(40vh - 100px);
+    top: 100px;
     left: 0;
     background-color: var(--transparent);
     text-align: left;
@@ -309,8 +335,8 @@
     display: flex;
     position: absolute;
     width: 100vw;
-    height: calc(100vh - 350px);
-    top: 350px;
+    height: calc(100vh - calc(100px + calc(40vh - 100px)));
+    top: calc(100px + calc(40vh - 100px));
     left: 0;
     background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1), rgba(0,0,0,1));
     

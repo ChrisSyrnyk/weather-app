@@ -85,6 +85,11 @@ function App(){
         </div>
         <div className="degree-toggle search-font" onClick = {()=> toggleisCelcius()}>{toggleSymbol()}</div>
       </div>
+      <div className='location-container'>
+        <div className='location-card'>
+          {currentLocation}
+        </div>
+      </div>
       <div className="todays-weather">
         <CurrentWeatherComponent weather = {currentWeather} isCelcius = {isCelcius}/>
         <HourlyWeatherComponent weather = {hourlyWeather} isCelcius = {isCelcius}/>
