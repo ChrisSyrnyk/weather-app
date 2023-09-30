@@ -195,7 +195,7 @@ class DailyCardComponent extends Component{
                             <div key={day.dt}>
                                 <div className="daily-card">
                                     <div className='daily-header'>
-                                        <div className = "daily-info">
+                                        <div className = "daily-date">
                                             {this.convertDate(this.date)}
                                         </div>
                                     </div>
