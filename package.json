@@ -1,4 +1,5 @@
 {
+  "homepage": "http://ChrisSyrnyk.github.io/weather-app",
   "name": "weather-app",
   "version": "0.1.0",
   "private": true,
@@ -11,7 +12,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://{ChrisSyrnyk}.github.io/{weather-app}",
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
