@@ -367,6 +367,7 @@
     flex-direction: column;
     position: relative;
     width: 90%;
+    max-width: 800px;
     height: 20vw;
     max-height: 150px;
     margin: auto;
@@ -394,6 +395,7 @@
     display: flex;
     flex: 0 0 auto;
     width: 85%;
+    max-width: 750px;
     height: 2px;
     background-color: var(--divider-color);
     margin: auto;
@@ -425,9 +427,10 @@
     display: flex;
     width: 10vw;
     height: 10vw;
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 70px;
+    max-height: 70px;
     margin: auto;
+    margin-left: min(2vw,20px);
     color: white;
     background-color: var(--icon-blue);
     border: none;
