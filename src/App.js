@@ -69,16 +69,26 @@ function App(){
     }
   }
 
+  const handleKeyDown = (e) =>{
+    if (e.key === 'Enter'){
+      updateLocation()
+    }
+  }
+
   
     return (
       <>
       <div className="search-bar">
         <div className="location-form">
-          <input type = "text" id = "city" name = "city" className="input-box"/>
+          <input type = "text" id = "city" name = "city" className="input-box" onKeyDown={handleKeyDown}/>
           <button className="submit-button" onClick={updateLocation}>Search</button>
         </div>
-        <div className="location">{currentLocation}</div>
         <div className="degree-toggle search-font" onClick = {()=> toggleisCelcius()}>{toggleSymbol()}</div>
+      </div>
+      <div className='location-container'>
+        <div className='location-card'>
+          {currentLocation}
+        </div>
       </div>
       <div className="todays-weather">
         <CurrentWeatherComponent weather = {currentWeather} isCelcius = {isCelcius}/>

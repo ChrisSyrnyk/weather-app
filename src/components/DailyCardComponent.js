@@ -32,6 +32,7 @@ class DailyCardComponent extends Component{
     setIcon(iconCode){
         this.icon = 'http://openweathermap.org/img/wn/' + iconCode + '@2x.png'
     }
+
     addToTempArray(temp){
         this.tempArray = this.tempArray.concat(temp);
     }
@@ -115,7 +116,7 @@ class DailyCardComponent extends Component{
 
     calculateWind(wind){
         //windspeed given in meters per second
-        let kph = (wind*1000)/3600
+        let kph = wind * 3.6;
         if (this.props.isCelcius){
             return Math.round(kph) + 'kph'
         } else{
@@ -125,6 +126,56 @@ class DailyCardComponent extends Component{
         
     }
 
+    convertDate(dateString){
+        let date = new Date(dateString);
+        let day = date.getDate();
+        let month = date.getMonth();
+        switch(month){
+            case 0:
+                month = 'January';
+                break;
+            case 1:
+                month = 'February';
+                break;
+            case 2:
+                month = 'March';
+                break;
+            case 3:
+                month = 'April';
+                break;
+            case 4:
+                month = 'May';
+                break;
+            case 5:
+                month = 'June';
+                break;
+            case 6:
+                month = 'July';
+                break;
+            case 7:
+                month = 'August';
+                break;
+            case 8:
+                month = 'September';
+                break;
+            case 9:
+                month = 'October';
+                break;
+            case 10:
+                month = 'November';
+                break;
+            case 11:
+                month = 'December';
+                break;
+            default:
+                month = '';      
+        }
+
+
+
+        return month + ' ' + day
+    }
+
 
 
 
@@ -132,6 +183,7 @@ class DailyCardComponent extends Component{
     render(){
         return(
             <>
+                {this.resetTempArray()}
                 {this.props.weather.list.map((day) =>{
                         this.addToTempArray(day.main.temp);
                         this.addToPop(day.pop);
@@ -142,20 +194,29 @@ class DailyCardComponent extends Component{
                         return(
                             <div key={day.dt}>
                                 <div className="daily-card">
-                                    <div className = "daily-info">
-                                        {this.date}
+                                    <div className='daily-header'>
+                                        <div className = "daily-info">
+                                            {this.convertDate(this.date)}
+                                        </div>
                                     </div>
-                                    <div className = "daily-icon">
-                                        {<img src= {this.icon}/>}
-                                    </div>
-                                    <div className = "daily-info">
-                                        {'High: ' + this.calculateTemp(this.returnHighTemp()) + '°' + ' / Low: ' + this.calculateTemp(this.returnLowTemp())+ '°'}
-                                    </div>
-                                    <div className = "daily-info">
-                                        {'Precipitation: ' + this.determinePop() + '%'}
-                                    </div>
-                                    <div className = "daily-info">
-                                        {'Max Windspeed: ' + this.calculateWind(this.determineMaxWind())}
+                                    <div className='daily-body'>
+                                        <div className = "daily-icon">
+                                            {<img src= {this.icon}/>}
+                                        </div>
+                                        <div className='high-low'>
+                                            <div className = "daily-info">
+                                                {'High: ' + this.calculateTemp(this.returnHighTemp()) + '°'}
+                                            </div> 
+                                            <div className = "daily-info">
+                                                {'Low: ' + this.calculateTemp(this.returnLowTemp())+ '°'}
+                                            </div>
+                                        </div>
+                                        <div className = "daily-info">
+                                            {'POP: ' + this.determinePop() + '%'}
+                                        </div>
+                                        <div className = "daily-info">
+                                            {'Wind: ' + this.calculateWind(this.determineMaxWind())}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="daily-divider"></div>
@@ -164,7 +225,6 @@ class DailyCardComponent extends Component{
                                 {this.resetPop()}
                                 {this.resetWind()}
                             </div>
-                            
                         )
                     } else {
                         //call function to add info to arrays
