@@ -7,7 +7,7 @@ This projected was created using the openweather API. It provides weather inform
 - Manage Async API get requests
 - Parse Json Info
 
-# Built With:
+# Built with:
 - Open Weather API
 - React.js
 - HTML
