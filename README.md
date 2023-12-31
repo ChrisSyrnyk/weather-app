@@ -3,7 +3,7 @@ This projected was created using the openweather API. It provides weather inform
 
 [View Project](https://chrissyrnyk.github.io/weather-app/)
 
-![DisplayPhoto](https://github.com/ChrisSyrnyk/weather-app/src/img/weather-app-display.png?raw=true)
+![DisplayPhoto](https://github.com/ChrisSyrnyk/weather-app/blob/main/src/img/weather-app-display.png)
 
 # Goals
 - Manage Async API get requests
